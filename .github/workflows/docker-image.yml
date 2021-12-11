@@ -25,4 +25,4 @@ jobs:
       run: docker build . --file Dockerfile --tag thesuhu/docker-node-oracle-pm2:14
      
     - name: Docker Push
-      run: docker push ${{secrets.DOCKER_USER}}/docker-node-oracle-pm2
+      run: docker push ${{secrets.DOCKER_USER}}/docker-node-oracle-pm2:14
