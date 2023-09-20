@@ -1,4 +1,4 @@
-FROM node:14
+FROM node:16
 
 # install oracle client
 RUN apt-get update \
@@ -28,6 +28,6 @@ ENV OCI_VERSION=12
 
 RUN echo '/opt/oracle/instantclient/' | tee -a /etc/ld.so.conf.d/oracle_instant_client.conf && ldconfig
 
-RUN npm install pm2 -g --prefer-online
+RUN npm install pm2@latest -g --prefer-online
 
 RUN pm2 -v
